@@ -7,7 +7,7 @@ async function processOrdersUpdates(){
     const queue = "delayed_order_updates_queue";
     await channel.assertQueue(queue, {durable:true})
 
-    console.log("Waiting for the queue");
+    console.log("Waiting for the queue ");
     channel.consume(
         queue,
         async(msg) =>{
